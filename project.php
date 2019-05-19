@@ -4,7 +4,7 @@
     $rovers = trim(fgets(STDIN)); 
     echo "Position to go:";
     $endPosition = trim(fgets(STDIN));
-    $m2P = explode(" ", $endPosition);
+    $endPositionTmp = explode(" ", $endPosition);
     for($x = 0; $x < $rovers; $x++) {
         echo "Current position: ";
         $curren_position = trim(fgets(STDIN)); 
@@ -51,7 +51,7 @@
                 $info[$i]["y"]= $info[$i]["y"]-1;
             }
         }
-        $a=$i+1;
-        echo  "\n Rover: ".$a." ".$info[$i]["x"]." ".$info[$i]["y"]." ".$info[$i]["look"]."\n";
+        $roverNumber = $i + 1;
+        echo  "\n Rover: ".$roverNumber." ".$info[$i]["x"]." ".$info[$i]["y"]." ".$info[$i]["look"]."\n";
     }
 ?>
